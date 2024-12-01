@@ -26,6 +26,7 @@ Before starting, make sure you have the following installed:
   - **Node.js** (https://nodejs.org)
   - **MongoDB** (or use a cloud MongoDB service like MongoDB Atlas)
 ### **Frontend Setup**
+
 1. Navigate to the frontend directory:
 ```bash
 - cd frontend
@@ -33,12 +34,24 @@ Before starting, make sure you have the following installed:
 2. Install dependencies
 ```
 npm install
+npm init -y
+npm install express mongoose bcrypt jsonwebtoken cors dotenv
+npm install axios
+```
+# create file
+```
+New-Item -ItemType File -Path "src\components\Signup.js"
+New-Item -ItemType File -Path "src\components\Login.js"
+New-Item -ItemType File -Path "src\services\api.js"
+New-Item -ItemType File -Path "src\App.js"
+New-Item -ItemType File -Path "src\index.js"
+
 ```
 3. Run the React app:
 ```
 npm start
 ```
-# Frontend Setup
+# backend Setup
 1. Navigate to the backend directory
 ```
 cd backend
@@ -46,17 +59,36 @@ cd backend
 2. Install dependencies
 ```
 npm install
+npm init -y
+npm install express mongoose bcrypt jsonwebtoken dotenv cors
+npm install --save-dev nodemon
 ```
-3. Create a **.env** file in the **src** directory with the following content:
+ # Create directories
+   ```
+  
+mkdir src
+mkdir src/controllers
+mkdir src/models
+mkdir src/routes
+mkdir src/config
+
+# Create files
+New-Item src/controllers/authController.js -ItemType File
+New-Item src/models/User.js -ItemType File
+New-Item src/routes/authRoutes.js -ItemType File
+New-Item src/server.js -ItemType File
+New-Item src/config/db.js -ItemType File
+   ```
+4. Create a **.env** file in the **src** directory with the following content:
 ```
 MONGO_URI=mongodb://localhost:you db url/authentication
-JWT_SECRET=your_jwt_secret_key
-Replace your_jwt_secret_key with a secure key for JWT generation.
+
 ```
-4. Start the backend server:
+5. Start the backend server:
 ``` 
 npm run dev
 ```
+
 # Project Structure
 1. **Frontend**
 
