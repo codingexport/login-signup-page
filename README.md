@@ -145,4 +145,4 @@ This project does not have specific tests implemented yet. You can add testing f
   ## Author
 
 **Akhil**  
-Developed with 💻 and ❤️ for **OctaNet-Services**.
+Developer.
